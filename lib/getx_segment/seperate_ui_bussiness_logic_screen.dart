@@ -10,7 +10,7 @@ class SeperateUiBussinessLogicScreen extends StatefulWidget {
 }
 
 class _SeperateUiBussinessLogicScreenState extends State<SeperateUiBussinessLogicScreen> {
-  MyController myController = Get.put(MyController());
+  MyController myController = Get.put(MyController(),permanent: false,tag: 'instance');
 
   @override
   Widget build(BuildContext context) {

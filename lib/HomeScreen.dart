@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_project/getx_segment/bottom_sheet.dart';
 import 'package:getx_project/getx_segment/complex_reactive_screen.dart';
 import 'package:getx_project/getx_segment/controller_life_cycle_screen.dart';
+import 'package:getx_project/getx_segment/dependancy_injection_screen.dart';
 import 'package:getx_project/getx_segment/getx_unique_id_screen.dart';
 import 'package:getx_project/getx_segment/internationalization_screen.dart';
 import 'package:getx_project/getx_segment/seperate_ui_bussiness_logic_screen.dart';
@@ -300,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 15),
                   child: InkWell(
-                    onTap: () =>   Get.to(const InternationalizationScreen()),
+                    onTap: () =>   Get.to(const DependancyInjectionScreen()),
                     child: Container(
                         height: 40,
                         width: 220,

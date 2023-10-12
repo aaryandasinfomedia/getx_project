@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:get/get.dart';
 import 'package:getx_project/item_classes/student.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyController extends GetxController {
   // var student = Student();
@@ -110,6 +111,17 @@ class MyController extends GetxController {
 void changeLanguage(var language,var languageCode) {
   var locale = Locale(language, languageCode);
   Get.updateLocale(locale);
+}
+
+
+// =========================================================================================================================
+                                              /*for Dependency Injection*/
+
+void dependencyInjectionIncrement() async {
+  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  int counter = (sharedPreferences.getInt('counter') ??  0) +1;
+  print('check = $counter');
+  await sharedPreferences.setInt('counter', counter);
 }
 
 }

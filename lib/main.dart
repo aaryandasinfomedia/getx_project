@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_project/HomeScreen.dart';
 import 'package:get/get.dart';
+import 'package:getx_project/controller/controller_class.dart';
 import 'package:getx_project/getx_segment/next_screen.dart';
 import 'package:getx_project/item_classes/localization_class.dart';
 
@@ -13,6 +14,12 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+
+    // Get.put(MyController(),permanent: true,tag: 'damn');
+    // Get.lazyPut(() => MyController(),tag: 'instance', fenix: true);
+    // Get.create<MyController>(() => MyController());
+    Get.putAsync<MyController>(() async=> await MyController());
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // defaultTransition: Transition.circularReveal,
