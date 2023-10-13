@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:getx_project/HomeScreen.dart';
+import 'package:getx_project/controller/getx_service.dart';
+import 'package:getx_project/getx_segment/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:getx_project/controller/controller_class.dart';
 import 'package:getx_project/getx_segment/next_screen.dart';
+import 'package:getx_project/item_classes/all_controller_binding.dart';
 import 'package:getx_project/item_classes/localization_class.dart';
 
 
-void main() {
+Future<void> main() async {
+ await initServices();
   runApp(const MyApp());
+}
+
+Future<void> initServices() async{
+  print('starting services..');
+  await Get.putAsync(() async => await GetXServices());
+  print('All services started..');
 }
 
 class MyApp extends StatelessWidget {
@@ -29,6 +38,9 @@ class MyApp extends StatelessWidget {
       fallbackLocale: Locale('en','US'),
       title: 'GetX',
       initialRoute: '/',
+
+      initialBinding: AllControllerBinding(),
+
       getPages: [
         GetPage(name: '/', page: () => const HomeScreen(),),
         GetPage(name: '/nextScreen', page: () => const NextScreen(),
