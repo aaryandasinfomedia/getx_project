@@ -9,6 +9,7 @@ class BindingSecondScreen extends StatefulWidget {
 }
 
 class _BindingSecondScreenState extends State<BindingSecondScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

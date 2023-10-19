@@ -8,7 +8,7 @@ class AllControllerBinding implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<MyController>(() => MyController());
-    Get.lazyPut<BindingController>(() => BindingController());
+    Get.put<BindingController>(BindingController());
   }
 
 }

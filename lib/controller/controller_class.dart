@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:get/get.dart';
+import 'package:getx_project/productModel.dart';
 import 'package:getx_project/item_classes/student.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '';
 
 class MyController extends GetxController {
   // var student = Student();
@@ -15,6 +17,7 @@ class MyController extends GetxController {
   var lifeCycleCount = 15;
   var uniqueIDCount = 3;
   var workerCount = 1.obs;
+
 
   // =========================================================================================================================
                                            /* for reactive state management */
@@ -123,5 +126,11 @@ void dependencyInjectionIncrement() async {
   print('check = $counter');
   await sharedPreferences.setInt('counter', counter);
 }
+
+// =========================================================================================================================
+                                            /*for Api Calling*/
+
+
+
 
 }
