@@ -14,7 +14,7 @@ class _BindingSecondScreenState extends State<BindingSecondScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GetX Binding'),
+        title: Text('GetX Storage Data'),
         foregroundColor: Colors.white,
         centerTitle: true,
         backgroundColor: Colors.deepPurple,

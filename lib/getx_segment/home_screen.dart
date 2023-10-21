@@ -6,6 +6,7 @@ import 'package:getx_project/getx_segment/bottom_sheet.dart';
 import 'package:getx_project/getx_segment/complex_reactive_screen.dart';
 import 'package:getx_project/getx_segment/controller_life_cycle_screen.dart';
 import 'package:getx_project/getx_segment/dependancy_injection_screen.dart';
+import 'package:getx_project/getx_segment/get_storage_screen.dart';
 import 'package:getx_project/getx_segment/getx_sevice_screen.dart';
 import 'package:getx_project/getx_segment/getx_unique_id_screen.dart';
 import 'package:getx_project/getx_segment/internationalization_screen.dart';
@@ -388,6 +389,28 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: const Center(
                               child: Text('GetX Api Fetch', style: TextStyle(fontSize: 18),))),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: InkWell(
+                      onTap: () =>   Get.to(const GetStorageScreen()),
+                      child: Container(
+                          height: 40,
+                          width: 220,
+                          decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.all(Radius.circular(5)),
+                              border: Border.all(color: Colors.black),
+                              boxShadow: const [
+                                BoxShadow(
+                                  spreadRadius: 1,
+                                  blurRadius: 1
+                              )],
+                              color: const Color(0xFFF7F1FB)
+                          ),
+                          child: const Center(
+                              child: Text('Get Storage Data', style: TextStyle(fontSize: 18),))),
                     ),
                   ),
 

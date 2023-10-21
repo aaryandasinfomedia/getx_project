@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:getx_project/controller/getx_service.dart';
 import 'package:getx_project/getx_segment/home_screen.dart';
 import 'package:get/get.dart';
@@ -10,6 +11,7 @@ import 'package:getx_project/item_classes/localization_class.dart';
 
 Future<void> main() async {
  await initServices();
+ await GetStorage.init();
   runApp(const MyApp());
 }
 
